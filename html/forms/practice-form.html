@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pet Sitting Request Form</title>
+</head>
+<body>
+<h1>Pet sitting request</h1>
+<form name="pet-request" action="success.html" method="post">
+  <fieldset>
+    <div>
+      <label>Owner's Full name:</label>
+      <input type="text" name="owner-name">
+    </div>
+
+    <div>
+      <label>Email:</label>
+      <input type="email" name="email-address">
+    </div>
+
+    <div>
+      <label>Phone:</label>
+      <input type="tel" name="phone">
+    </div>
+
+    <div>
+      <label>Pet's name:</label>
+      <input type="text" name="pet-name">
+    </div>
+
+    <div>
+      <label>Type of pet:</label>
+      <select name="pet">
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="alligator">Alligator</option>
+      </select>
+    </div>
+
+    <div>    
+      <label>Drop-off date:</label>
+      <input type="date" name="drop-off-date">
+    </div>
+
+    <div>    
+      <label>Pick-up date:</label>
+      <input type="date" name="pick-up-date">
+    </div>
+
+    <div>
+      <label>Anything we should know about your pet?</label>
+      <br>
+      <textarea name="extra-info" rows="4" cols="50"></textarea>
+    </div>
+
+  </fieldset>
+ <button type="submit">Submit Request</button>
+</form>
+</body>
+</html>
