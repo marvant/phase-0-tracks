@@ -3,3 +3,9 @@ img#placing-hat{
 	left: 540px;
 	top: 130px;
 }
+
+img#glasses-on{
+	position: absolute;
+	left: 601px;
+	top: 305px;
+}
