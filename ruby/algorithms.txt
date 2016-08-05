@@ -1,0 +1,60 @@
+* Release 0 - Algorithm for using an elevator *
+
+- Get department for placing a bid
+	- Search database for department’s level number
+
+- Go to the elevator
+
+- Scan elevator for level number
+
+- Figure out if you need to go up or down by subtracting current level number from department’s level number
+	- If department’s level number - level number is 	  greater than zero 
+		- push up button
+	- If less than zero
+		- push down button
+	- If equals zero
+		- Go place the bid
+
+- When elevator door is open walk in
+
+- Locate floor buttons
+
+- Start from the lowest floor button compare each floor button number to department’s level number 
+	- Until you find a match
+		- Push the button
+		- when arrived at the department place the 		  bid
+	- If no match
+		- Come back 
+
+
+Release 1 - Keeping track of your car’s fuel consumption 
+
+-Use the algorithm when filling up the gas tank.
+
+- If using the algorithm for the first time:
+
+	- Get the current_mileage
+
+	- Get the date
+
+	- Print the date, current_mileage, and the 		  message “mpg is not available at this time”
+
+	- Set the last_mileage equal to current_mileage 	  (last_mileage = current_mileage)
+
+- Otherwise:
+
+	- Get current_mileage
+
+	- Get the date 
+
+	- Get number of gallons_used 
+
+	- Calculate distance_traveled (current_mileage - 	  last_mileage)
+
+	- Calculate mpg (distance_traveled / 	 		  gallons_used)
+
+	- print mpg
+
+	- Set the last_mileage equal to current_mileage 	  (last_mileage = current_mileage)
+
+
