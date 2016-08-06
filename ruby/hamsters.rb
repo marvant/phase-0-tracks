@@ -26,3 +26,10 @@ if input.to_i <= 0
 	age = nil
 else age = input
 end
+
+p "Hamster Name: #{hamster_name}" 
+p "Volume Level: #{hamster_volume}"
+p "Fur Color: #{hamster_color}"
+p "Good candidate for adoption: #{candidate}"
+p "Estimated age: #{age}"
+puts "Thanks for entrying this hamster's information"
