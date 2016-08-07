@@ -12,7 +12,7 @@ def encrypt (str)
 		index += 1
 	end
 
-	puts str
+	p str
 
 end
 
@@ -32,8 +32,11 @@ def decrypt (str)
 		str [i] = z
 		i += 1
 	end
-	puts str
+	p str
 end
 
 decrypt("bcd")
 decrypt("afe")
+
+decrypt(encrypt("swordfish"))
+#It works because encrypt moves the letter forward and decrypt moves it back to the original.
