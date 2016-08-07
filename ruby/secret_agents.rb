@@ -1,3 +1,8 @@
+puts "Would you like to decrypt or encrypt your password?"
+answer = gets.chomp
+
+puts "What is your password?"
+password = gets.chomp
 
 def encrypt (str)
 	index = 0
@@ -16,8 +21,8 @@ def encrypt (str)
 
 end
 
-encrypt("abc")
-encrypt("zed")
+#encrypt("abc")
+#encrypt("zed")
 
 
 def decrypt (str)
@@ -35,8 +40,16 @@ def decrypt (str)
 	p str
 end
 
-decrypt("bcd")
-decrypt("afe")
+#decrypt("bcd")
+#decrypt("afe")
 
-decrypt(encrypt("swordfish"))
+#decrypt(encrypt("swordfish"))
 #It works because encrypt moves the letter forward and decrypt moves it back to the original.
+
+if answer == "encrypt"
+    encrypt(password)
+elsif answer == "decrypt"
+    decrypt(password)
+else 
+    p "Sorry answer can only be encrypt or decrypt"
+end
