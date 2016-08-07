@@ -1,15 +1,24 @@
+
 def encrypt (str)
 	index = 0
 	while index < str.length
+		if str[index] == "z"
+			str[index] = "a"
+		elsif str[index] == "9"
+			str[index] = "1"
+		else
 		str[index] = str[index].next
+	end
 		index += 1
 	end
+
 	puts str
+
 end
 
-puts "type in a word"
-str = gets.chomp
-encrypt (str)
+encrypt("abc")
+encrypt("zed")
+
 
 def decrypt (str)
 	i=0
@@ -26,6 +35,5 @@ def decrypt (str)
 	puts str
 end
 
-puts "type in another word"
-str = gets.chomp
-decrypt(str)
+decrypt("bcd")
+decrypt("afe")
