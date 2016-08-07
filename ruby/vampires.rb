@@ -1,3 +1,8 @@
+puts "How many employees will be proccessed?"
+num_employee=gets.chomp.to_i
+i= 1
+while i <= num_employee do
+
 puts "What is your name?"
 name = gets.chomp.upcase
 
@@ -36,4 +41,6 @@ if condition == nil
 end
 puts condition
 
+i+=1
+end
 
