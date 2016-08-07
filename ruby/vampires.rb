@@ -36,6 +36,16 @@ if name == "DRACULA" || name == "TU FANG" || name == "DRAKE CULA"
 	condition = "Definitely a vampire"
 end
 
+puts "Please list all your allergies"
+allergies = gets.chomp
+until allergies == "done"
+	if allergies == "sunshine"
+		condition = "Probably a vampire"
+		allergies = "done"
+	else allergies = gets.chomp
+end
+end
+
 if condition == nil
 	condition = "Results Inconclusive"
 end
