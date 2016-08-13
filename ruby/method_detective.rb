@@ -4,39 +4,50 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
-"iNvEsTiGaTiOn".swapcase
+p "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
+p "Bcd".swapcase
 
-"zom".insert(1,'o')
+p "zom".insert(1,'o')
 # => “zoom”
+p "tst".insert(1, 'e')
 
-("enhance".ljust(11)).rjust(15)
+p ("enhance".ljust(11)).rjust(15)
 # => "    enhance    "
+p ("space".ljust(10)).rjust(15)
 
-"Stop! You’re under arrest!".upcase
+p "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
+p "upercase everything".upcase
 
-"the usual".insert(9,' suspects')
+p "the usual".insert(9,' suspects')
 #=> "the usual suspects"
+p "add word to ".insert(12, "string")
 
-" suspects".insert(0, 'the usual')
+p " suspects".insert(0, 'the usual')
 # => "the usual suspects"
+p " to the begining".insert(0, "add")
 
-"The case of the disappearing last letter".chop
+p "The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
+p "remove the last letterr".chop
 
-"The mystery of the missing first letter".reverse.chop.reverse
+p "The mystery of the missing first letter".reverse.chop.reverse
 # => "he mystery of the missing first letter"
+p "rremove the first letter".reverse.chop.reverse
 
-"Elementary,    my   dear        Watson!".squeeze
+p "Elementary,    my   dear        Watson!".squeeze
 # => "Elementary, my dear Watson!"
+p "get     rid of      extra      space".squeeze
 
-"z".ord
+p "z".ord
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 # each character is a represented by a number between 0 and 127. 
 # 122 is the assigned number for "z".  The opposite of ord is chr
 # 122.chr will return "z"
+p "b".ord
 
-"How many times does the letter 'a' appear in this string?".count "a"
+p "How many times does the letter 'a' appear in this string?".count "a"
 # => 4
+p "count how many letter 'n' is used in this sentance".count "n"
