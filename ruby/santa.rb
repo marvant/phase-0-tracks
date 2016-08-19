@@ -1,4 +1,6 @@
 class Santa 
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
 
 	def speak
 		puts "Ho, ho, ho! Haaaappy holidays!"
@@ -25,19 +27,19 @@ class Santa
 		@reindeer_ranking.push(@reindeer_ranking.delete(name))
 	end
 
-	#setter method
-	def gender= (new_gender)
-		@gender = new_gender
-	end
+	# #setter method
+	# def gender= (new_gender)
+	# 	@gender = new_gender
+	# end
 
-	#getter methods
-	def age
-		@age
-	end
+	# #getter methods
+	# def age
+	# 	@age
+	# end
 
-	def ethnicity
-		@ethnicity
-	end
+	# def ethnicity
+	# 	@ethnicity
+	# end
 end
 
 # x = Santa.new
