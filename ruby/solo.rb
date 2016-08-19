@@ -1,5 +1,7 @@
 #create new class
 class Soccer_player
+	attr_reader :name, :height
+	attr_accessor :age, :position
 
 	#initialization method to print a message when new instance (player) is created
 	def initialize (name, age, height)
@@ -7,6 +9,8 @@ class Soccer_player
 		@name = name
 		@age = age
 		@height = height
+	#pre-set attribute
+		@position = "TBD"
 	end
 
 #method to shoot the ball
@@ -34,5 +38,7 @@ end
 
 #driver codes
 new_player = Soccer_player.new("Messi", 29, 5.7)
+puts "Player Info: name: #{new_player.name}; age: #{new_player.age}; height: #{new_player.height}, position: #{new_player.position}"
 new_player.shoot
 new_player.player_poistion("Forward")
+puts "Player Info: name: #{new_player.name}; age: #{new_player.age}; height: #{new_player.height}, position: #{new_player.position}"
