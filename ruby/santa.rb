@@ -16,6 +16,28 @@ class Santa
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		@age = 0
 	end
+
+	def celebrate_birthday
+		@age = @age + 1
+	end
+
+	def get_mad_at (name)
+		@reindeer_ranking.push(@reindeer_ranking.delete(name))
+	end
+
+	#setter method
+	def gender= (new_gender)
+		@gender = new_gender
+	end
+
+	#getter methods
+	def age
+		@age
+	end
+
+	def ethnicity
+		@ethnicity
+	end
 end
 
 # x = Santa.new
@@ -44,3 +66,11 @@ x = Santa.new("male", "black")
 p x
 p x.speak
 p x.eat_milk_and_cookies("oreo")
+p x.celebrate_birthday
+p x.get_mad_at("Dasher")
+p x.gender = "Complicated"
+puts "Our #{x.ethnicity} santa is #{x.age} years old"
+
+
+
+
