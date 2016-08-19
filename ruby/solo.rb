@@ -36,9 +36,46 @@ class Soccer_player
 
 end
 
-#driver codes
-new_player = Soccer_player.new("Messi", 29, 5.7)
-puts "Player Info: name: #{new_player.name}; age: #{new_player.age}; height: #{new_player.height}, position: #{new_player.position}"
-new_player.shoot
-new_player.player_poistion("Forward")
-puts "Player Info: name: #{new_player.name}; age: #{new_player.age}; height: #{new_player.height}, position: #{new_player.position}"
+# #driver codes
+# new_player = Soccer_player.new("Messi", 29, 5.7)
+# puts "Player Info: name: #{new_player.name}; age: #{new_player.age}; height: #{new_player.height}, position: #{new_player.position}"
+# new_player.shoot
+# new_player.player_poistion("Forward")
+# puts "Player Info: name: #{new_player.name}; age: #{new_player.age}; height: #{new_player.height}, position: #{new_player.position}"
+
+
+#user interface
+#user can enter as many new palyers as desiered and type done to exit
+new_player = []
+count = 0
+puts "Enter new player's name or type done to exit"
+name = gets.chomp
+
+until name == "done"
+puts "Enter new player's age"
+age = gets.chomp.to_i
+puts "Enter new player's height"
+height = gets.chomp.to_f
+new_player[count] = Soccer_player.new(name, age, height)
+puts "Player Info: name: #{new_player[count].name}; age: #{new_player[count].age}; height: #{new_player[count].height}, position: #{new_player[count].position}"
+count += 1
+puts "Enter new player's name or type done to exit"
+name = gets.chomp
+end
+
+#Once user is done with entering players' info each loop will print all the players entered
+puts "Here is the list of all your players:"
+new_player.each do |x| puts "#{new_player.index(x)+1}: Name: #{new_player[new_player.index(x)].name}; Age: #{new_player[new_player.index(x)].age}; Height: #{new_player[new_player.index(x)].height}"
+end
+
+
+
+
+
+
+
+
+
+
+
+
