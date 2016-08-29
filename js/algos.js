@@ -53,3 +53,66 @@ compare({name: "Steven", age: 54}, {name: "Tamir", age: 54, eyecolor: "brown"});
 compare({make: "VW", model: "GTI", year: 2012}, {"make": "VW", model: "Jetta", year: 2005});
 compare({make: "VW", model: "GTI", year: 2012}, {"make": "Benz", model: "GLK", year: 2016});
 
+// function to generate random words and return them in an array
+// console.log(Math.floor((Math.random() * 10) + 1));
+// console.log(",".charCodeAt(0));
+// var res = String.fromCharCode(72, 69, 76, 76, 79);
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+// writing a function to generate random words
+
+// defining an empty variable to store the words
+	var words = [];
+//define a function that take in an intiger and generates words equal to the given number and returns them in an array
+function generator(number){
+	console.log("Generating words");
+
+	// define an alphabet varialbe and turn it into an array
+	var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+	
+	// // defining an empty variable to store the words
+	// var words = [];
+	
+	// loop to generate as many wods as specified in paramerter
+	for (i=0; i < number; i++){
+		// define a variable to add to it random letters generated to make a word
+		var word = "";
+		
+		// set the lenght of each word with a random number from 1 to 10
+		var word_length = (Math.floor((Math.random() * 10) + 1));
+		
+		// a loop to generate each letter of the word
+		for (j=0; j < word_length; j++){
+			// add each letter generated to the variable word
+			word = word + (alphabet[getRandomInt(0, 25)]);
+			
+		}
+		// print each word created
+		console.log(word);
+		// add each word created to the words array
+		words.push(word);
+	}
+	// print the array with all the words created
+	console.log(words);
+	return words;
+}
+
+// driver code
+// generator(10);
+// LongestPhrase(words);
+
+// driver code that loops 10 times
+for (i=1; i < 11; i++){
+	generator(i);
+	LongestPhrase(words);
+}
+
+
+
+
+
+
+
+
+
