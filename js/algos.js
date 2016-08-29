@@ -18,18 +18,6 @@ function LongestPhrase (array) {
 
 LongestPhrase(["long phrase", "longest phrase", "longer phrase"]);
 
-//create an object
-// function PersonalInfo(name, age){
-// 	this.name = name;
-// 	this.age = age;
-// }
-
-// obj1 = {name: "Steven", age: 54}
-// obj2 = {name: "Tamir", age: 55}
-// console.log(Object.keys(obj1).length);
-// var keys = Object.keys(obj1);
-// console.log(keys);
-// console.log(obj2[keys[1]]);
 
 
 // create a function that takes two objects
