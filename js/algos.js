@@ -42,9 +42,6 @@ compare({make: "VW", model: "GTI", year: 2012}, {"make": "VW", model: "Jetta", y
 compare({make: "VW", model: "GTI", year: 2012}, {"make": "Benz", model: "GLK", year: 2016});
 
 // function to generate random words and return them in an array
-// console.log(Math.floor((Math.random() * 10) + 1));
-// console.log(",".charCodeAt(0));
-// var res = String.fromCharCode(72, 69, 76, 76, 79);
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
