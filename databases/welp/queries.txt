@@ -1,0 +1,23 @@
+Release 2
+
+2. 
+sqlite> SELECT * FROM users JOIN reviews ON users.id = reviews.user_id
+   ...> JOIN businesses ON reviews.business_id = businesses.id;
+4|Steven|Wonder|1|3|Speedy response.|3|4|3|Amir's Towing
+2|Bradford|Pitt|2|5|Great drinks.|4|2|4|The Beagle Nightclub
+2|Bradford|Pitt|3|1|Haunted.|2|2|2|Grundy Hollow Wedding Chapel
+
+3.
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment
+   ...> FROM users JOIN reviews ON users.id = reviews.user_id
+   ...> JOIN businesses ON reviews.business_id = businesses.id;
+Steven|Wonder|Amir's Towing|3|Speedy response.
+Bradford|Pitt|The Beagle Nightclub|5|Great drinks.
+Bradford|Pitt|Grundy Hollow Wedding Chapel|1|Haunted.
+
+4. 
+sqlite> SELECT * 
+   ...> FROM users JOIN reviews ON users.id = reviews.user_id                      
+   ...> JOIN businesses ON reviews.business_id = businesses.id
+   ...> WHERE businesses.id = 2;
+2|Bradford|Pitt|3|1|Haunted.|2|2|2|Grundy Hollow Wedding Chapel
