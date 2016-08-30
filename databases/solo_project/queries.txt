@@ -1,0 +1,61 @@
+1. 
+sqlite> SELECT * FROM cars;
+1|2005|VW|GLI|150000|false|1
+2|2012|VW|GTI|60000|true|2
+3|2016|MB|GLK-250|20000|true|3
+4|2007|Honda|Civic|60000|true|1
+5|2000|Toyota|Camry|36000|false|2
+
+2.
+sqlite> UPDATE cars SET runs="false" WHERE model="Civic";
+sqlite> SELECT * FROM cars;
+1|2005|VW|GLI|150000|false|1
+2|2012|VW|GTI|60000|true|2
+3|2016|MB|GLK-250|20000|true|3
+4|2007|Honda|Civic|60000|false|1
+5|2000|Toyota|Camry|36000|false|2
+
+3. 
+sqlite> SELECT * FROM cars, dealers WHERE cars.dealer_id = dealers.id;
+1|2005|VW|GLI|150000|false|1|1|San Jose Auto
+2|2012|VW|GTI|60000|true|2|2|Palo Alto Auto
+3|2016|MB|GLK-250|20000|true|3|3|San Francisco Auto
+4|2007|Honda|Civic|60000|false|1|1|San Jose Auto
+5|2000|Toyota|Camry|36000|false|2|2|Palo Alto Auto
+
+4. 
+sqlite> SELECT cars.year, cars.make, dealers.name FROM cars JOIN dealers ON cars.dealer_id = dealers.id;
+2005|VW|San Jose Auto
+2012|VW|Palo Alto Auto
+2016|MB|San Francisco Auto
+2007|Honda|San Jose Auto
+2000|Toyota|Palo Alto Auto
+
+5. 
+sqlite> DELETE FROM cars WHERE year = 2000;
+sqlite> SELECT * FROM cars;
+1|2005|VW|GLI|150000|false|1
+2|2012|VW|GTI|60000|true|2
+3|2016|MB|GLK-250|20000|true|3
+4|2007|Honda|Civic|60000|false|1
+
+Release 3
+2. 
+sqlite> SELECT year, make, name FROM cars NATURAL JOIN dealers;
+2005|VW|San Jose Auto
+2012|VW|Palo Alto Auto
+2016|MB|San Francisco Auto
+
+sqlite> SELECT year, make, mileage, name FROM cars CROSS JOIN dealers;
+2005|VW|150000|San Jose Auto
+2005|VW|150000|Palo Alto Auto
+2005|VW|150000|San Francisco Auto
+2012|VW|60000|San Jose Auto
+2012|VW|60000|Palo Alto Auto
+2012|VW|60000|San Francisco Auto
+2016|MB|20000|San Jose Auto
+2016|MB|20000|Palo Alto Auto
+2016|MB|20000|San Francisco Auto
+2007|Honda|60000|San Jose Auto
+2007|Honda|60000|Palo Alto Auto
+2007|Honda|60000|San Francisco Auto
