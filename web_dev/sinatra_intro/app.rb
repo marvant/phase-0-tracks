@@ -44,3 +44,27 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+# write a GET route that displays an address
+get '/address/' do 
+  "#{params[:house_number]} #{params[:street]}, #{params[:city]}, #{params[:state]} #{params[:zipcode]}"
+end
+
+# write a good job GET
+get '/good_job/' do 
+  name = params[:name]
+  if name
+    "Good Job, #{name}!"
+  else
+    "Good Job!"
+  end
+end
+
+# wirte get to add two number
+get '/add/:number1/:number2' do 
+  n1 = params[:number1].to_i
+  n2 = params[:number2].to_i
+  a = n1 + n2
+  "#{a}"
+  
+end
