@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Templet</title>
+</head>
+<body>
+<h1>New Templet</h1>
+<ul>
+    <% @students.each do |student| %>
+      <li><%= student['id'] %> <%= student['name'] %></li>
+    <% end %>
+  </ul>
+
+</body>
+</html>
